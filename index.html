@@ -142,19 +142,19 @@
         <div class="permanentAddress" >
             <span class="sectionDetails" style="color: rgb(13, 26, 101);">Permanent Address</span><br><br>
             <label for="street">Street Address:</label><br>
-            <input type="text" id="street1" name="street"><br>
+            <input type="text" id="street1" name="street1"><br>
             
             <label for="city">City:</label><br>
-            <input type="text" id="city1" name="city"><br>
+            <input type="text" id="city1" name="city1"><br>
             
             <label for="state">State:</label><br>
-            <input type="text" id="state1" name="state"><br>
+            <input type="text" id="state1" name="state1"><br>
             
             <label for="zip">ZIP Code:</label><br>
-            <input type="text" id="zip1" name="zip" pattern="[0-9]{5}" title="Five digit zip code"><br>
+            <input type="text" id="zip1" name="zip1" pattern="[0-9]{5}" title="Five digit zip code"><br>
             
             <label for="country">Country:</label><br>
-            <input type="text" id="country1" name="country" placeholder="INDIA"><br>
+            <input type="text" id="country1" name="country1" placeholder="INDIA"><br>
         </div>
     
         <div class="correspondenceAddress" style="margin-left: 50px;" >
@@ -164,19 +164,19 @@
             <label for="sameAddress"> Same as permanent address</label><br>
         
             <label for="street">Street Address:</label><br>
-            <input type="text" id="street2" name="street" class="sameas"><br>
+            <input type="text" id="street2" name="street2" class="sameas"><br>
             
             <label for="city">City:</label><br>
-            <input type="text" id="city2" name="city" class="sameas"><br>
+            <input type="text" id="city2" name="city2" class="sameas"><br>
             
             <label for="state">State:</label><br>
-            <input type="text" id="state2" name="state" class="sameas"><br>
+            <input type="text" id="state2" name="state2" class="sameas"><br>
             
             <label for="zip">ZIP Code:</label><br>
-            <input type="text" id="zip2" name="zip" class="sameas" pattern="[0-9]{5}" title="Five digit zip code"><br>
+            <input type="text" id="zip2" name="zip2" class="sameas" pattern="[0-9]{5}" title="Five digit zip code"><br>
             
             <label for="country">Country:</label><br>
-            <input type="text" id="country2" name="country" class="sameas" placeholder="INDIA"><br>
+            <input type="text" id="country2" name="country2" class="sameas" placeholder="INDIA"><br>
 
         </div>
     </div><br>
@@ -336,5 +336,15 @@
 </div>
 
 <script src="script.js"></script>
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyrWsnlD0Baw62tieD57tFu2Hdtu-G3kPNc4oveWr8YFpTLa4Kyql9SP_5RNSauA07F/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .catch(error => console.error('Error!', error.message))
+    })
 </body>
 </html>
