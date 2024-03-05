@@ -1,0 +1,167 @@
+body{
+    height: auto;
+    width: auto;
+    background-image: url(images/bg-image.png)
+          
+}
+
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5em;
+    padding: 15px;
+}
+
+
+.main{
+    width: 50%;
+    margin: auto;
+    padding-top: 20px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    background-color: #EEF0F2; 
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+
+.sectionDetails{
+    color: rgb(225, 107, 11);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+form input{
+    margin-bottom: 15px;
+}
+
+
+.sectionOne{
+    display: flex;
+    gap: 69px;
+
+}
+
+
+.sectionTwo > *,
+.sectionThree > *{
+    flex-grow: 1;
+}
+
+
+.sectionTwo{
+    display: flex;
+    gap: 30px;
+}
+
+.sectionThree{
+    display: flex;
+    gap: 30px;
+}
+
+.sectionFour{
+    display: flex;
+    gap: 13%;
+    margin-bottom: 15px;
+    }
+
+.sectionFive{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 15px;
+
+}
+
+.sectionSix{
+    display: flex;
+       
+}
+.sectionSix >*{
+    width: 50%;
+}
+
+
+.father, .mother{
+    display: flex;
+    gap: 50px;
+    
+}
+ 
+
+table, th, td {
+  	border-collapse: collapse;
+}
+
+th, td {
+  	padding: 5px;
+}
+
+.sectionEight input{
+    margin-top: 19px;
+}
+
+th{
+
+    font-size: 17px;
+    color: rgb(13, 26, 101);
+
+}
+
+#addNew{
+    background-color: rgb(112, 209, 64);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-color: rgb(112, 209, 64);
+    
+}
+
+#delete{
+    background-color: rgb(235, 53, 53);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-color: rgb(235, 53, 53);
+    
+}
+
+
+.sectionTen{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.sectionTen >* {
+    width: 50%;
+    
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 50px;
+    
+    
+}
+
+#submit1{
+    color: #7353BA;
+    font-weight: bold;
+    border-color: #7353BA;
+    height: 30px;
+    width: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+#reset1{
+    color: rgb(235, 53, 53);
+    font-weight: bold;
+    border-color: rgb(235, 53, 53);
+    height: 30px;
+    width: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
