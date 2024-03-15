@@ -1,350 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Data Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <h1 id="heading"><u>Employee Data Form</u></h1>
+    <div class="main">
+        <form id="form" name="google-sheet">
+            <!--================ SectionOne Personal Details =========== -->
+            <span class="sectionDetails" id="personalDetails">Personal Details</span>
+            <hr>
+            <div class="sectionOne">
+                <div class="department">
+                    <label for="department" id="department">Department:</label><br>
+                    <select name="department">
+                        <option value="Front-End" name="Front-End">Front-End</option>
+                        <option value="Back-End" name="Back-End">Back-End</option>
+                        <option value="Other" name="OtherDepartment">Other</option>
+                    </select>
+                </div>
+                <div class="designation">
+                    <label for="designation" id="designation">Designation: </label><br>
+                    <select name="designation" id="frontEnd" style="width: 143.20px;">
+                        <option value="">-Select-</option>
+                        <option value="Web Designer" name="WebDesigner">Web Designer</option>
+                        <option value="Web Developer" name="WebDeveloper">Web Developer</option>
+                        <option value="UI Developer" name="UIDeveloper">UI Developer</option>
+                        <option value="Junior Frontend Developer" name="JFD">Junior Frontend Developer</option>
+                        <option value="Senior Frontend Developer" name="SFD">Senior Frontend Developer</option>
+                        <option value="Lead Frontend Developer" anme="LFD">Lead Frontend Developer</option>
+                    </select>
+                    <select name="designation" id="backEnd" style="display: none;">
+                        <option value="">-Select-</option>
+                        <option value="API Developer">API Developer</option>
+                        <option value="DevOps Engineer">DevOps Engineer</option>
+                        <option value="Cloud Engineer">Cloud Engineer</option>
+                        <option value="Database Developer">Database Developer</option>
+                        <option value="Backend Developer">Backend Developer</option>
+                    </select>
+                    <input type="text" name="otherDesignation" style="display: none; width: 143.20px;">
 
-
-
-<h1><u>Employee Data Form</u></h1>
-
-<div class="main">
-<form id="form" method="post" name="google-sheet">
-
-
-
-<!--================ SectionOne Personal Details =========== -->    
-<span class="sectionDetails">Personal Details</span><hr>
-
-
-<div class="sectionOne">
-    <div class="department">
-        <label for="department">Department:</label><br>
-        <input type = "text" name = "department" />
-    </div>
-    
-    <div class="designation">
-        <label for="designation">Designation: </label><br>
-        <input type = "text" name = "designation" />    
-    </div>
-
-    <div class="joiningDate">
-        <label for="joiningDate">Joining Date: </label><br>
-        <input type = "date" name = "joiningDate" />    
-    </div>
-</div>
-
-<!-- ===============Section Two Name==================== -->
-    <div class="sectionTwo">
-        <div class="fname">
-        <label for="fname">First Name: </label><br>
-        <input type = "text" name = "fname" />
-        </div>
-
-        <div class="mname">
-        <label for="mname">Middle Name: </label><br>
-        <input type = "text" name = "mname" />
-        </div>
-
-        <div class="lname">
-        <label for="lname">Last Name: </label><br>
-        <input type = "text" name = "lname" />
-        </div>
-    </div>
-
-<!-- ============ Section Three================ -->
-    <div class="sectionThree">
-        <div class="fathername" >
-            <label for="fathername">Father's Name: </label><br>
-            <input type="text" name="fathername" >
-        </div>
-
-        <div class="aadhar">
-            <label for="aadhar"> Aadhar No.</label><br>
-            <input type="tel" name="aadhar"  pattern="[0-9]{16}" minlength="16" maxlength="16" placeholder="16-Digit Numeric">
-        </div>
-
-        <div class="panCard">
-            <label for="panCard"> Pan Card No.</label><br>
-            <input type="text" name="panCard" minlength="10" maxlength="10" placeholder="10-Digit Alphanumeric">
-        </div>
-    </div>
-    
-    <!-- ==============Section Four ================ -->
-    <div class="sectionFour">
-        
-        <div class="gender">
-            <label for="gender">Gender:</label><br>
-            <select name="gender">
-                <option value="other">Other</option>
-                <option value="female">Female</option>
-                <option value="male">Male</option>
-            </select>
-        </div>
-
-        <div class="dob">
-            <label for="dob" > Date of Birth: </label><br>
-            <input type="date" name="dob">
-        </div>
-
-        <div class="maritalStatus">
-            <label for="maritalStatus">Marital Status: </label><br>
-            <select name="maritalstatus">
-                <option value="">-Select-</option>
-                <option value="Single">Single</option>
-                <option value="Married">Married</option>
-                <option value="Widowed">Widowed</option>
-            </select>
-        </div>
-
-        <div class="bloodGroup">
-            <label for="bloodGroup"> Blood Group: </label><br>
-            <select>
-                <option value="">-Select-</option>
-                <option value="A Positive">A Positive</option>
-                <option value="A Negative">A Negative</option>
-                <option value="B Positive">B Positive</option>
-                <option value="B Negative">B Negative</option>
-                <option value="AB Positive">AB Positive</option>
-                <option value="AB Negative">AB Negative</option>
-                <option value="O Positive">O Positive</option>
-                <option value="O Negative">O Negative</option>
-                <option value="Unknown">Unknown</option>
-            </select>
-        </div>
-    </div>
-
-    <!-- ============ Section Five ============= -->
-    <div class="sectionFive">
-        
-
-        <div class="mob">
-            <label for="mob">Mobile No. :</label>
-            <input type="tel" name="mob" pattern="[0-9]{10}" maxlength="10" placeholder="10-Digits Numeric">
-            <input type="tel"  name="mob" pattern="[0-9]{10}" maxlength="10" >
-        </div>
-
-        <div class="email">
-            <label for="email">Email: </label>
-            <input type="email" name="email">
-        </div>
-    </div>
-
-    <!-- ==========Section Six  ADDRESS======= -->
-    <span class="sectionDetails">Address</span><hr>
-    
-    <div class="sectionSix">
-        
-        <div class="permanentAddress" >
-            <span class="sectionDetails" style="color: rgb(13, 26, 101);">Permanent Address</span><br><br>
-            <label for="street">Street Address:</label><br>
-            <input type="text" id="street1" name="street1"><br>
-            
-            <label for="city">City:</label><br>
-            <input type="text" id="city1" name="city1"><br>
-            
-            <label for="state">State:</label><br>
-            <input type="text" id="state1" name="state1"><br>
-            
-            <label for="zip">ZIP Code:</label><br>
-            <input type="text" id="zip1" name="zip1" pattern="[0-9]{5}" title="Five digit zip code"><br>
-            
-            <label for="country">Country:</label><br>
-            <input type="text" id="country1" name="country1" placeholder="INDIA"><br>
-        </div>
-    
-        <div class="correspondenceAddress" style="margin-left: 50px;" >
-
-            <span class="sectionDetails" style="color: rgb(13, 26, 101);">Correspondence Address</span><br>
-            <input type="checkbox" name="sameAddress">
-            <label for="sameAddress"> Same as permanent address</label><br>
-        
-            <label for="street">Street Address:</label><br>
-            <input type="text" id="street2" name="street2" class="sameas"><br>
-            
-            <label for="city">City:</label><br>
-            <input type="text" id="city2" name="city2" class="sameas"><br>
-            
-            <label for="state">State:</label><br>
-            <input type="text" id="state2" name="state2" class="sameas"><br>
-            
-            <label for="zip">ZIP Code:</label><br>
-            <input type="text" id="zip2" name="zip2" class="sameas" pattern="[0-9]{5}" title="Five digit zip code"><br>
-            
-            <label for="country">Country:</label><br>
-            <input type="text" id="country2" name="country2" class="sameas" placeholder="INDIA"><br>
-
-        </div>
-    </div><br>
-
-    <!-- ================Section Seven Family Details=============== -->
-    <span class="sectionDetails">Family Details</span><hr> <br>
-    <div class="sectionSeven">
-        <div class="father">
-            <div class="fathername2" >
-                <label for="fathername2">Father's Name: </label><br>
-                <input type="text" name="fathername2" readonly  >
+                </div>
+                <div class="joiningDate">
+                    <label for="joiningDate" id="joiningDate">Joining Date: </label><br>
+                    <input type="date" name="joiningDate" />
+                </div>
+                <div class="leavingDate">
+                    <label for="leavingDate" id="leavingDate">Leaving Date: </label><br>
+                    <input type="date" name="leavingDate" />
+                </div>
             </div>
-            
-            <div class="fatherqualification">
-                <label for="fatherqualification">Father's Qualification</label><br>
-                <input type="text" name="fatherqualification">
+            <!-- ===============Section Two Name==================== -->
+            <div class="sectionTwo">
+                <div class="salutation">
+                    <label for="salutation" id="salutation">Salutation: </label><br>
+                    <select name="salutation" style="width: 70px;">
+                        <option value="Mr.">Mr.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        <option value="Miss">Miss</option>
+                    </select>
+
+                </div>
+                <div class="fname">
+                    <label for="fname" id="fname">First Name: </label><br>
+                    <input type="text" name="fname" />
+                </div>
+                <div class="mname">
+                    <label for="mname">Middle Name: </label><br>
+                    <input type="text" name="mname" />
+                </div>
+                <div class="lname">
+                    <label for="lname">Last Name: </label><br>
+                    <input type="text" name="lname" />
+                </div>
             </div>
-
-            <div class="fatheroccupation">
-                <label for="fatheroccupation">Father's Occupation</label><br>
-                <input type="text" name="fatheroccupation" >
+            <!-- ============ Section Three================ -->
+            <div class="sectionThree">
+                <div class="fathername">
+                    <label for="fathername">Father's Name: </label><br>
+                    <input type="text" name="fathername">
+                </div>
+                <div class="aadhar">
+                    <label for="aadhar"> Aadhar No.</label><br>
+                    <input type="tel" name="aadhar" pattern="[0-9]{16}" minlength="16" maxlength="16"
+                        placeholder="16-Digit Numeric">
+                </div>
+                <div class="panCard">
+                    <label for="panCard"> Pan Card No.</label><br>
+                    <input type="text" name="panCard" minlength="10" maxlength="10" placeholder="10-Digit Alphanumeric">
+                </div>
             </div>
-        </div>
+            <!-- ==============Section Four ================ -->
+            <div class="sectionFour">
+                <div class="gender">
+                    <label for="gender">Gender:</label><br>
 
-        <div class="mother">
-            <div class="mothername" >
-                <label for="mothername">Mother's Name: </label><br>
-                <input type="text" name="mothername">
+                    <input type="text" name="gender" value="Male" style="width: 75px; text-align: center;">
+                </div>
+                <div class="dob">
+                    <label for="dob"> Date of Birth: </label><br>
+                    <input type="date" name="dob">
+                </div>
+                <div class="maritalStatus">
+                    <label for="maritalStatus">Marital Status: </label><br>
+                    <select name="maritalstatus">
+                        <option value="">-Select-</option>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Widowed">Widowed</option>
+                    </select>
+                </div>
+                <div class="bloodGroup">
+                    <label for="bloodGroup"> Blood Group: </label><br>
+                    <select name="bloodGroup">
+                        <option value="">-Select-</option>
+                        <option value="A Positive">A Positive</option>
+                        <option value="A Negative">A Negative</option>
+                        <option value="B Positive">B Positive</option>
+                        <option value="B Negative">B Negative</option>
+                        <option value="AB Positive">AB Positive</option>
+                        <option value="AB Negative">AB Negative</option>
+                        <option value="O Positive">O Positive</option>
+                        <option value="O Negative">O Negative</option>
+                        <option value="Unknown">Unknown</option>
+                    </select>
+                </div>
             </div>
+            <!-- ============ Section Five ============= -->
+            <div class="sectionFive">
 
-            <div class="motherqualification">
-                <label for="motherqualification">Mother's Qualification</label><br>
-                <input type="text" name="motherqualification">
+
+                <div class="mob">
+                    <label for="mob">Mobile No. :</label>
+                    <input type="tel" name="mob1" pattern="[0-9]{10}" maxlength="10" placeholder="10-Digits Numeric">
+                    <input type="tel" name="mob2" pattern="[0-9]{10}" maxlength="10">
+                </div>
+
+                <div class="email">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email">
+                </div>
             </div>
+            <!-- ==========Section Six  ADDRESS======= -->
+            <span class="sectionDetails">Address</span>
+            <hr>
+            <div class="sectionSix">
+                <div class="permanentAddress">
+                    <span class="sectionDetails" style="color: rgb(13, 26, 101);">Permanent Address</span><br><br>
+                    <label for="street">Street Address:</label><br>
+                    <input type="text" id="street1" name="street1" class="address"><br>
 
-            <div class="motheroccupation">
-                <label for="motheroccupation">Mother's Occupation</label><br>
-                <input type="text" name="motheroccupation">
+                    <label for="city">City:</label><br>
+                    <input type="text" id="city1" name="city1" class="address"><br>
+
+                    <label for="state">State:</label><br>
+                    <input type="text" id="state1" name="state1" class="address"><br>
+
+                    <label for="zip">ZIP Code:</label><br>
+                    <input type="text" id="zip1" name="zip1" class="address" pattern="[0-9]{6}"
+                        title="Six digit zip code"><br>
+
+                    <label for="country">Country:</label><br>
+                    <input type="text" id="country1" name="country1" class="address" placeholder="India"
+                        value="India"><br>
+                </div>
+                <div class="correspondenceAddress" style="margin-left: 50px;">
+                    <span class="sectionDetails" style="color: rgb(13, 26, 101);">Correspondence Address</span><br>
+                    <input type="checkbox" name="sameAddress" id="checkbox">
+                    <label for="checkbox"> Same as permanent address</label><br>
+                    <label for="street">Street Address:</label><br>
+                    <input type="text" id="street2" name="street2" class="sameas"><br>
+                    <label for="city">City:</label><br>
+                    <input type="text" id="city2" name="city2" class="sameas"><br>
+                    <label for="state">State:</label><br>
+                    <input type="text" id="state2" name="state2" class="sameas"><br>
+                    <label for="zip">ZIP Code:</label><br>
+                    <input type="text" id="zip2" name="zip2" class="sameas" pattern="[0-9]{6}"
+                        title="Six digit zip code"><br>
+                    <label for="country">Country:</label><br>
+                    <input type="text" id="country2" name="country2" class="sameas"><br>
+                </div>
             </div>
+            <!-- ================Section Seven Family Details=============== -->
+            <span class="sectionDetails">Family Details</span>
+            <hr> <br>
+            <div class="sectionSeven">
+                <div class="father">
+                    <div class="fathername2">
+                        <label for="fathername2">Father's Name: </label><br>
+                        <input type="text" name="fathername2" readonly>
+                    </div>
+                    <div class="fatherqualification">
+                        <label for="fatherqualification">Father's Qualification</label><br>
+                        <input type="text" name="fatherqualification">
+                    </div>
+                    <div class="fatheroccupation">
+                        <label for="fatheroccupation">Father's Occupation</label><br>
+                        <input type="text" name="fatheroccupation">
+                    </div>
+                </div>
+                <div class="mother">
+                    <div class="mothername">
+                        <label for="mothername">Mother's Name: </label><br>
+                        <input type="text" name="mothername">
+                    </div>
+                    <div class="motherqualification">
+                        <label for="motherqualification">Mother's Qualification</label><br>
+                        <input type="text" name="motherqualification">
+                    </div>
+                    <div class="motheroccupation">
+                        <label for="motheroccupation">Mother's Occupation</label><br>
+                        <input type="text" name="motheroccupation">
+                    </div>
+                </div>
+                <div class="siblings">
+                    <label for="siblings">Siblings:</label>
+                    <input type="number" name="siblings" min="0" max="99" placeholder="0">
+                </div>
+            </div>
+            <!-- ==============Section Eight Qualification========== -->
+            <span class="sectionDetails">Qualification Details</span>
+            <hr>
+            <table class="sectionEight">
+                <thead>
+                    <tr>
+                        <th>Qualification</th>
+                        <th>Board/University</th>
+                        <th>Passing Year</th>
+                        <th>Marksheets</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="secondaryEdu">
+                        <td> <label for="name">Secondary</label></td>
+                        <td><input type="text" name="tenthBoard"></td>
+                        <td><input type="number" min="2000" max="2024" name="tenthyear" /></td>
+                        <td><input type="file" name="tenthMarksheet" accept="application/pdf" id="pdf"></td>
+                    </tr>
 
-        </div>
+                    <tr class="seniorSecEdu">
+                        <td><label for="name">Senior Secondary</label></td>
+                        <td><input type="text" name="twelfthBoard"></td>
+                        <td><input type="number" min="2000" max="2024" name="twelfthyear" class="year"></td>
+                        <td><input type="file" name="twelfthMarksheet" accept=".pdf"></td>
+                    </tr>
 
-        <div class="siblings">
-            <label for="siblings">Siblings:</label>
-            <input type="number" name="siblings" min="0" max="99" placeholder="0">
-        </div>
-    </div><br>
+                    <tr class="gradEdu">
+                        <td><label for="name">Graduation</label></td>
+                        <td><input type="text" name="graduationBoard"></td>
+                        <td><input type="number" min="2000" max="2024" name="graduationyear" class="year" /></td>
+                        <td><input type="file" name="graduationMarksheet" accept=".pdf"></td>
+                    </tr>
 
-<!-- ==============Section Eight Qualification========== -->
-<span class="sectionDetails">Qualification Details</span><hr>
+                    <tr class="postGradEdu">
+                        <td><label for="name">Post Graduation</label></td>
+                        <td><input type="text" name="postGradBoard"></td>
+                        <td><input type="number" min="2000" max="2024" name="postGradyear" class="year" /></td>
+                        <td><input type="file" name="postGradMarksheet" accept=".pdf"></td>
+                    </tr>
 
-<table class="sectionEight">
-    <tr>
-        <th>Qualification</th>
-        <th>Board/University</th>
-        <th>Passing Year</th>
-        <th>Marksheets</th>
-    </tr>
+                    <tr class="otherEdu">
+                        <td>Any Other</td>
+                        <td><input type="text" name="otherBoard"></td>
+                        <td><input type="number" min="2000" max="2024" name="otheryear" class="year" /></td>
+                        <td><input type="file" name="otherMarksheet" accept=".pdf"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- =============Section Nine Experience========= -->
+            <span class="sectionDetails">Experience</span>
+            <hr>
+            <table class="sectionNine">
+                <thead>
+                    <tr>
+                        <th><label for="companyName">Company Name</label></th>
+                        <th><label for="companyRole">Designation</label></th>
+                        <th><label for="workingPeriod">Working Period</label></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="experienceInput">
+                        <td><input type="text" name="companyName"></td>
+                        <td><input type="text" name="companyRole"></td>
+                        <td><input type="text" name="workingPeriod"></td>
+                        <td><input type="button" value="Add New" id="addNew"></td>
+                        <td><input type="button" value="Delete" id="delete"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- ==============Section Ten Banking Details========== -->
+            <span class="sectionDetails">Banking Details</span>
+            <hr>
+            <div class="sectionTen">
+                <div class="bankName">
+                    <label for="bankName">Bank Name</label><br>
+                    <input type="text" name="bankName">
+                </div>
+                <div class="accountNo">
+                    <label for="accountNo">Account Number</label><br>
+                    <input type="text" name="accountNo">
+                </div>
 
-    <tr>
-        <td> <label for="name">Secondary</label></td>
-        <td><input type="text" name="tenthBoard" ></td>
-        <td><input type="number" min="1900" max="2099" /></td>
-        <td><input type="file" name="tenthMarksheet" accept=".pdf" ></td>
-    </tr>
+                <!-- <div class="addbank"><br><input type="button" value="Add New" id="addbank"></div> -->
 
-    <tr>
-        <td><label for="name">Senior Secondary</label></td>
-        <td><input type="text" id="twelfthBoard" ></td>
-        <td><input type="number" min="1900" max="2099" ></td>
-        <td><input type="file" name="twelfthMarksheet" accept=".pdf" ></td>
-    </tr>
+                <div class="bankingName">
+                    <label for="bankingName">Banking Name </label><br>
+                    <input type="text" name="bankingName">
+                </div>
 
-    <tr>
-        <td><label for="name">Graduation</label></td>
-        <td><input type="text" id="graduationBoard" ></td>
-        <td><input type="number" min="1900" max="2099" /></td>
-        <td><input type="file" name="graduationMarksheet" accept=".pdf" ></td>
-    </tr>
-
-    <tr>
-        <td><label for="name">Post Graduation</label></td>
-        <td><input type="text" id="postGradBoard" ></td>
-        <td><input type="number" min="1900" max="2099" /></td>
-        <td><input type="file" name="postGradMarksheet" accept=".pdf" ></td>
-    </tr>
-
-    <tr>
-        <td>Any Other</td>
-        <td><input type="text" id="otherBoard"></td>
-        <td><input type="number" min="1900" max="2099"/></td>
-        <td><input type="file" name="otherMarksheet" accept=".pdf" ></td>
-    </tr>
-
-</table><br>
-
-
-<!-- =============Section Nine Experience========= -->
-<span class="sectionDetails">Experience</span><hr>
-<table class="sectionNine">
-    <tr>
-        <th><label for="companyName">Company Name</label></th>
-        <th><label for="companyRole">Designation</label></th>
-        <th><label for="workingPeriod">Working Period</label></th>
-    </tr>
-
-    <tr class="experienceInput">
-        <td><input type="text" name="companyName"></td>
-        <td><input type="text" name="companyRole"></td>
-        <td><input type="text" name="workingPeriod"></td>
-        <td><input type="button" value="Add New" id="addNew"></td>
-        <td><input type="button" value="Delete" id="delete"></td>
-    </tr>
-
-</table>
+                <div class="ifscCode">
+                    <label for="ifscCode">IFSC Code</label><br>
+                    <input type="text" name="ifscCode">
+                </div>
 
 
-<!-- ==============Section Ten Banking Details========== -->
-<span class="sectionDetails">Banking Details</span><hr>
-<div class="sectionTen">
-    <div class="bankName">
-        <label for="bankName">Bank Name</label><br>
-        <input type="text" name="bankName" >
+                <!-- <div class="deletebank"><br><input type="button" value="Delete" id="deletebank"></div> -->
+
+            </div>
+            <hr>
+            <!-- ==========Submit & Reset ============ -->
+            <div class="buttons">
+                <div class="submit">
+                    <input type="submit" id="submit1" name="submitbutton">
+                </div>
+
+                <div class="reset">
+                    <input type="reset" id="reset1">
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="accountNo">
-        <label for="accountNo">Account Number</label><br>
-        <input type="text" name="accountNo" >
-    </div>
+    <script src="script.js"></script>
 
-    <div class="bankingName">
-        <label for="bankingName">Banking Name </label><br>
-        <input type="text" name="bankingName" >
-    </div>
-
-    <div class="ifscCode">
-        <label for="ifscCode">IFSC Code</label><br>
-        <input type="text" name="ifscCode">
-    </div>
-
-</div><hr>
-
-
-<!-- ==========Submit & Reset ============ -->
-
-<div class="buttons">
-    <div class="submit">
-        <input type="submit" id="submit1" name="submitbutton" >
-        </div>
-    
-        <div class="reset">
-        <input type="reset" id="reset1" >
-    </div>
-    
-</div>
-
-</form>
-</div>
-
-<script src="script.js"></script>
-    <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyrWsnlD0Baw62tieD57tFu2Hdtu-G3kPNc4oveWr8YFpTLa4Kyql9SP_5RNSauA07F/exec'
-    const form = document.forms['google-sheet']
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-        .catch(error => console.error('Error!', error.message))
-    })
 </body>
+
 </html>
