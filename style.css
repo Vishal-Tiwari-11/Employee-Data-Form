@@ -1,10 +1,8 @@
-body{
+body {
     height: auto;
     width: auto;
     background-image: url(images/bg-image.png)
-          
 }
-
 
 h1 {
     text-align: center;
@@ -14,139 +12,147 @@ h1 {
     padding: 15px;
 }
 
-
-.main{
-    width: 50%;
-    margin: auto;
-    padding-top: 20px;
-    border: 2px solid black;
-    display: flex;
-    justify-content: center;
-    background-color: #EEF0F2; 
-    font-family: 'Times New Roman', Times, serif;
-   
+hr {
+    height: 1px;
+    background-color: rgb(84, 83, 83);
 }
 
-.sectionDetails{
+.main {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form {
+    border: 2px solid black;
+    padding: 2%;
+    background-color: #e8e3e6;
+}
+
+.sectionDetails {
     color: rgb(225, 107, 11);
     font-size: 20px;
     font-weight: bold;
 }
 
-form input{
+form input {
     margin-bottom: 15px;
 }
 
-
-.sectionOne{
+.sectionOne {
     display: flex;
-    gap: 69px;
-
+    gap: 90px;
 }
 
-
-.sectionTwo > *,
-.sectionThree > *{
+.sectionTwo>*,
+.sectionThree>* {
     flex-grow: 1;
 }
 
-
-.sectionTwo{
+.sectionTwo {
     display: flex;
-    gap: 30px;
 }
 
-.sectionThree{
-    display: flex;
-    gap: 30px;
+.sectionThree {
+    display: inline-flex;
+    gap: 125px;
 }
 
-.sectionFour{
+.sectionFour {
     display: flex;
-    gap: 13%;
+    gap: 15%;
     margin-bottom: 15px;
-    }
-
-.sectionFive{
-    display: flex;
-    gap: 30px;
-    margin-bottom: 15px;
-
 }
 
-.sectionSix{
+.sectionFive {
     display: flex;
-       
+    gap: 2%;
 }
-.sectionSix >*{
+
+input[name="mob2"] {
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+.sectionSix {
+    display: flex;
+}
+
+.address,
+.sameas {
+    width: 35vh;
+}
+
+.sectionSix>* {
     width: 50%;
 }
 
-
-.father, .mother{
+.father,
+.mother {
     display: flex;
-    gap: 50px;
-    
-}
- 
-
-table, th, td {
-  	border-collapse: collapse;
+    gap: 15vh;
 }
 
-th, td {
-  	padding: 5px;
+table,
+th,
+td {
+    border-collapse: collapse;
 }
 
-.sectionEight input{
+th,
+td {
+    padding: 10px;
+}
+
+.sectionEight input {
     margin-top: 19px;
 }
 
-th{
-
+th {
     font-size: 17px;
     color: rgb(13, 26, 101);
-
 }
 
-#addNew{
+#addNew,
+#addbank {
     background-color: rgb(112, 209, 64);
     color: rgb(255, 255, 255);
     font-weight: bold;
     border-color: rgb(112, 209, 64);
-    
+    width: 70px;
 }
 
-#delete{
+#delete,
+#deletebank {
     background-color: rgb(235, 53, 53);
     color: rgb(255, 255, 255);
     font-weight: bold;
     border-color: rgb(235, 53, 53);
-    
+    width: 70px;
 }
 
+.deletebank {
+    margin-top: -20px;
+}
 
-.sectionTen{
+.sectionTen {
     display: flex;
     flex-wrap: wrap;
-    
 }
 
-.sectionTen >* {
+.sectionTen>* {
     width: 50%;
-    
 }
 
-.buttons{
+.buttons {
     display: flex;
     justify-content: center;
     margin-top: 30px;
     gap: 50px;
-    
-    
 }
 
-#submit1{
+#submit1 {
     color: #7353BA;
     font-weight: bold;
     border-color: #7353BA;
@@ -156,7 +162,7 @@ th{
     font-size: larger;
 }
 
-#reset1{
+#reset1 {
     color: rgb(235, 53, 53);
     font-weight: bold;
     border-color: rgb(235, 53, 53);
@@ -164,4 +170,36 @@ th{
     width: 100px;
     font-family: 'Times New Roman', Times, serif;
     font-size: larger;
+}
+
+input[type="text"]:hover,
+input[type="date"]:hover,
+input[type="number"]:hover,
+input[type="tel"]:hover,
+#email:hover {
+    background-color: rgb(254, 254, 254);
+}
+
+select:hover {
+    box-shadow: 1px 1px 0 #000 inset;
+}
+
+#submit1:hover {
+    color: #fdfbfc;
+    background-color: #7353BA;
+}
+
+#reset1:hover {
+    color: #fdfbfc;
+    background-color: rgb(235, 53, 53);
+}
+
+#addNew:hover {
+    background-color: rgb(73, 156, 31);
+    color: rgb(255, 255, 255);
+}
+
+#delete:hover {
+    background-color: rgb(188, 15, 15);
+    color: rgb(255, 255, 255);
 }
